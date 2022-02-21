@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define yes cout<<"yes\n";
+#define no cout<<"no\n";
+#define YES cout<<"YES\n";
+#define NO cout<<"NO\n";
+#define ll long long
+#define pb push_back
+#define mod 1000000007
+#define nl cout<<'\n';
+#define ff first
+#define ss second
+#define vi vector<int>
+#define vll vector<ll>
+#define vc vector<char>
+#define file_write freopen("input.txt", "r", stdin);freopen("output.txt", "w", stdout);
+#define loop1(m) for(int i=0;i<m;i++) 
+#define loop2(n,m) for(auto i=n;i<=m;i++)
+#define count1s(n) __builtin_popcount(n)
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+vi dx={-1,0,1,0};
+vi dy={0,1,0,-1};
+int main()
+{
+    fast
+    //file_write
+    int t;
+    //t=1;
+    cin>>t;
+    while(t--)
+    {
+        ll n;cin>>n;
+        ll k;cin>>k;
+        if(n==k)
+        {
+            loop2(1,n) cout<<i<<" ";
+            nl
+            continue;
+        }
+        if(k!=n-1)
+        {
+            loop2(1,k) cout<<i<<" ";
+            loop2(k+2,n) cout<<i<<" ";
+            cout<<k+1;
+        }
+        else
+        {
+            cout<<n<<" ";
+            loop2(2,n-1) cout<<i<<" ";
+            cout<<1;
+        }
+        nl
+    }
+    
+    return 0;
+}
